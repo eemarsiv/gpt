@@ -1,0 +1,43 @@
+diff --git a/style.css b/style.css
+index a1cfe672fa788b79beeeb2b342940acda23d52ed..8c94d226510eb72a45cc74df481d0f841eebf8b9 100644
+--- a/style.css
++++ b/style.css
+@@ -19,25 +19,38 @@ button {
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.2s;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ button:hover {
+     background-color: #005f87;
+     transform: scale(1.08);
+ }
+ .hidden {
+     display: none;
+ }
+ #darkModeToggle {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     padding: 10px 15px;
+     border-radius: 50%;
+     background-color: #007bb5;
+     color: white;
+     cursor: pointer;
+ }
+ .dark-mode {
+     background-color: #263238;
+     color: white;
+ }
++
++#searchInput {
++    display: block;
++    margin: 20px auto;
++    padding: 10px;
++    font-size: 16px;
++    width: 80%;
++    max-width: 400px;
++}
++
++#searchResults button {
++    margin: 5px;
++}
