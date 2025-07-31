@@ -1,0 +1,53 @@
+diff --git a/index.html b/index.html
+index 6a41dcf005d6db1c5934fba29e51f030c25d490e..1deb65be7c55039ff7aed0b4dce5a8078167d354 100644
+--- a/index.html
++++ b/index.html
+@@ -1,46 +1,48 @@
+ 
+ <!DOCTYPE html>
+ <html lang="tr">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>EEM Arşiv</title>
+     <link rel="stylesheet" href="style.css">
+ 
+     <!-- Google tag (gtag.js) -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KJ5LNBGV7"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'G-7KJ5LNBGV7');
+     </script>
+ </head>
+ <body>
+     <button id="darkModeToggle" onclick="toggleDarkMode()">🌙</button>
++    <input type="text" id="searchInput" placeholder="Ders ara..." oninput="searchCourse()">
++    <div id="searchResults" class="container"></div>
+     <div class="container" id="mainPage">
+         <h1>EEM Arşiv</h1>
+         <button onclick="showClasses(1)">1. Sınıf</button>
+         <button onclick="showClasses(2)">2. Sınıf</button>
+         <button onclick="showClasses(3)">3. Sınıf</button>
+         <button onclick="showClasses(4)">4. Sınıf</button>
+         <button onclick="window.open('https://t.me/Alchnes', '_blank')">İletişim</button>
+         <button onclick="window.open('https://chat.whatsapp.com/FNlzoNcc8UZ6uRaYBrNsiL?mode=r_t', '_blank')">
+             Tüm WhatsApp Grupları Tek Çatı Altında
+         </button>
+     </div>
+     <div class="container hidden" id="classPage">
+         <h1 id="classTitle"></h1>
+         <button onclick="showTerms(1)">1. Dönem</button>
+         <button onclick="showTerms(2)">2. Dönem</button>
+         <button onclick="goBack('mainPage')">Geri</button>
+     </div>
+     <div class="container hidden" id="termPage">
+         <h1 id="termTitle"></h1>
+         <div id="courseButtons"></div>
+         <button onclick="goBack('classPage')">Geri</button>
+     </div>
+     <script src="script.js"></script>
+ </body>
+ </html>
